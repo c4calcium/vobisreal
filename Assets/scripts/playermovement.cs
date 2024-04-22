@@ -34,7 +34,7 @@ public class playermovement : MonoBehaviour
       anim.SetBool("walk", horizontalinput != 0);
       anim.SetBool("grounded", isgrounded());
 
-//wall jumping
+      //wall jumping
       if(walljumpcooldown > 0.2f)
       {
          body.velocity = new Vector2(horizontalinput * speed,body.velocity.y);
@@ -75,6 +75,7 @@ public class playermovement : MonoBehaviour
          walljumpcooldown = 0;
       }
    }
+   
    private bool isgrounded()
    {
       RaycastHit2D raycastHit = Physics2D.BoxCast(capsulecollider.bounds.center, capsulecollider.bounds.size, 0, Vector2.down, 0.1f, groundlayer);
@@ -87,4 +88,8 @@ public class playermovement : MonoBehaviour
       return raycastHit.collider != null;
    }
 
+   public bool canattack()
+   {
+      return !onwall();
+   }
 }
