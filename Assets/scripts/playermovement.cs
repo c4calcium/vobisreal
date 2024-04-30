@@ -59,8 +59,15 @@ public class playermovement : MonoBehaviour
    private void jump()
    {
       if(isgrounded())
-      {
-         body.velocity = new Vector2(body.velocity.x, jumpamount);
+      { 
+         if (power.getLevel() == "jump")
+         {
+            body.velocity = new Vector2(body.velocity.x, jumpamount + 15  /* How much he jumps */ );
+         }
+         else
+         {
+            body.velocity = new Vector2(body.velocity.x, jumpamount);
+         }
          anim.SetTrigger("jump");
       }
       else if(onwall() && !isgrounded())

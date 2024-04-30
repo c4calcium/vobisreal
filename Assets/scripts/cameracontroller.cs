@@ -19,11 +19,11 @@ public class cameracontroller : MonoBehaviour
         transform.position = Vector3.SmoothDamp(transform.position, new Vector3(currentposx, transform.position.y, transform.position.z), ref velocity, speed);
         if(camera.orthographicSize > (size + 0.05f))
         {
-            camera.orthographicSize -= 0.1f;
+            camera.orthographicSize -= 0.01f;
         }
         else if(camera.orthographicSize < (size - 0.05f))
         {
-            camera.orthographicSize += 0.1f;
+            camera.orthographicSize += 0.01f;
         }
     }
 
