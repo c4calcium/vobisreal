@@ -7,6 +7,7 @@ public class ball : MonoBehaviour
     private bool hit;
     private CircleCollider2D ocollider;
     private Animator anim;
+    private float lifetime;
 
     private void Awake()
     {
@@ -19,9 +20,12 @@ public class ball : MonoBehaviour
         if (hit) return;
         float movementspeed = speed * Time.deltaTime * direction;
         transform.Translate(movementspeed, 0, 0);
+
+        lifetime += Time.deltaTime;
+        if(lifetime > 5) gameObject.SetActive(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) // WHY DOESN'T THIS WORK
     {
         hit = true;
         ocollider.enabled = false;
@@ -30,6 +34,7 @@ public class ball : MonoBehaviour
 
     public void setdirection(float _direction)
     {
+        lifetime = 0;
         direction = _direction;
         gameObject.SetActive(true);
         hit = false;
