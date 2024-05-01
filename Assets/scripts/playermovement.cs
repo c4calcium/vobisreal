@@ -12,12 +12,16 @@ public class playermovement : MonoBehaviour
    private CapsuleCollider2D capsulecollider;
    private float walljumpcooldown;
    private float horizontalinput;
+   private bool caniwall;
+   private bool jumped;
 
    private void Awake()
    {
+       caniwall = false;
       body = GetComponent<Rigidbody2D>(); 
       anim = GetComponent<Animator>(); 
       capsulecollider = GetComponent<CapsuleCollider2D>();
+      jumped = false;
    }
 
    private void Update()
@@ -58,7 +62,7 @@ public class playermovement : MonoBehaviour
 
    private void jump()
    {
-      if(isgrounded())
+      if(isgrounded() && !jumped)
       { 
          if (power.getLevel() == "jump")
          {
@@ -70,7 +74,7 @@ public class playermovement : MonoBehaviour
          }
          anim.SetTrigger("jump");
       }
-      else if(onwall() && !isgrounded())
+      else if(onwall() && !isgrounded() && caniwall)
       {
          if(horizontalinput == 0)
          {
