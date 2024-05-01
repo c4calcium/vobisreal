@@ -47,7 +47,7 @@ public class playermovement : MonoBehaviour
          else
             body.gravityScale = 8;
 
-         if (Input.GetKey(KeyCode.Space))
+         if (Input.GetKey(KeyCode.Space) || (Input.GetKey(KeyCode.W)) || (Input.GetKey(KeyCode.UpArrow)))
             jump();
 
       }
@@ -62,7 +62,7 @@ public class playermovement : MonoBehaviour
       { 
          if (power.getLevel() == "jump")
          {
-            body.velocity = new Vector2(body.velocity.x, jumpamount + 15  /* How much he jumps */ );
+            body.velocity = new Vector2(body.velocity.x, jumpamount + 10  /* How much he jumps */ );
          }
          else
          {

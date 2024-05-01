@@ -32,6 +32,5 @@ public class power : MonoBehaviour
     public static void setLevel(string lev)
     {
         level = lev;
-        print("CHANGE");
     }
 }

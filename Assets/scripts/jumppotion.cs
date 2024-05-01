@@ -6,7 +6,7 @@ public class jumppotion : MonoBehaviour {
     {
         if (collision.gameObject.name == "vob")
             power.setLevel("jump");
-            Destroy(gameObject);
+            gameObject.SetActive(false); // Hey.
         //power.setPowerChange(true);
     }
 }
