@@ -10,7 +10,7 @@ public class CameraScript : MonoBehaviour
     private float turn;//, increment;
     private bool forward;
     //public float size;
-    private bool time1;
+    private int time1;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class CameraScript : MonoBehaviour
        // edge = GetComponent<EdgeCollider2D>();
         
         forward = true;
-        time1 = false;
+        time1 = 0;
         //increment = /*securityCamera.transform.localScale.y*/ size / 30000.0f;
         turn = 0.3f;
     }
@@ -33,18 +33,20 @@ public class CameraScript : MonoBehaviour
 
 
         if (forward)
-            turn += 0.0006f;//increment/*0.0005f*/;
+            turn += 0.0005f;//increment/*0.0005f*/;
         else
-            turn -= 0.0006f;// increment/*0.0005f*/;
-        if (time1)
+            turn -= 0.0005f;// increment/*0.0005f*/;
+        if (time1 == 10)
             securityCamera.transform.Rotate(0, 0, turn);
 
-        if (turn < -0.3f)
+        if (turn < -0.7f)
             forward = true;
-        if (turn > 0.3f)
+        if (turn > 0.7f)
             forward = false;
 
-        time1 = !time1;
+        time1 ++;
+        if (time1 == 11)
+            time1 = 0;
         //(600 * increment)
         /*Time.deltaTime * 10
         print(securityCamera.position.z);
