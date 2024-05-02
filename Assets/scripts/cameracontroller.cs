@@ -4,6 +4,7 @@ public class cameracontroller : MonoBehaviour
 {
     [SerializeField] private float speed;
     private float currentposx;
+    private float currentposy;
     private float size;
     private Vector3 velocity = Vector3.zero;
     private new Camera camera;
@@ -16,20 +17,21 @@ public class cameracontroller : MonoBehaviour
 
     private void Update()
     {
-        transform.position = Vector3.SmoothDamp(transform.position, new Vector3(currentposx, transform.position.y, transform.position.z), ref velocity, speed);
+        transform.position = Vector3.SmoothDamp(transform.position, new Vector3(currentposx, currentposy, transform.position.z), ref velocity, speed);
         if(camera.orthographicSize > (size + 0.05f))
         {
-            camera.orthographicSize -= 0.01f;
+            camera.orthographicSize -= 0.05f;
         }
         else if(camera.orthographicSize < (size - 0.05f))
         {
-            camera.orthographicSize += 0.01f;
+            camera.orthographicSize += 0.05f;
         }
     }
 
     public void movetonewroom(Transform _newroom, float zoom)
     {
         currentposx = _newroom.position.x;
+        currentposy = _newroom.position.y;
         size = zoom;
     }
 }

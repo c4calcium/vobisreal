@@ -13,7 +13,7 @@ public class playermovement : MonoBehaviour
    private float walljumpcooldown;
    private float horizontalinput;
    private bool caniwall;
-   private bool jumped;
+   private float jumpcooldown;
 
    private void Awake()
    {
@@ -21,12 +21,17 @@ public class playermovement : MonoBehaviour
       body = GetComponent<Rigidbody2D>(); 
       anim = GetComponent<Animator>(); 
       capsulecollider = GetComponent<CapsuleCollider2D>();
-      jumped = false;
    }
 
    private void Update()
    {
       horizontalinput = Input.GetAxis("Horizontal");
+   
+   if (jumpcooldown > 0.2f)
+      jumpcooldown -= Time.deltaTime;
+
+   if (jumpcooldown < 0.2f)
+      jumpcooldown = 0;
 
       //flipping the lad
       if(horizontalinput > 0.01f)
@@ -37,6 +42,7 @@ public class playermovement : MonoBehaviour
       //animates the lad
       anim.SetBool("walk", horizontalinput != 0);
       anim.SetBool("grounded", isgrounded());
+      anim.SetBool("jump", jumpcooldown > 0);
 
       //wall jumping
       if(walljumpcooldown > 0.2f)
@@ -62,8 +68,9 @@ public class playermovement : MonoBehaviour
 
    private void jump()
    {
-      if(isgrounded() && !jumped)
+      if(isgrounded() && jumpcooldown == 0)
       { 
+  
          if (power.getLevel() == "jump")
          {
             body.velocity = new Vector2(body.velocity.x, jumpamount + 10  /* How much he jumps */ );
@@ -72,7 +79,8 @@ public class playermovement : MonoBehaviour
          {
             body.velocity = new Vector2(body.velocity.x, jumpamount);
          }
-         anim.SetTrigger("jump");
+         
+         jumpcooldown = 0.9f;
       }
       else if(onwall() && !isgrounded() && caniwall)
       {
