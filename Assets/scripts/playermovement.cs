@@ -73,7 +73,7 @@ public class playermovement : MonoBehaviour
   
          if (power.getLevel() == "jump")
          {
-            body.velocity = new Vector2(body.velocity.x, jumpamount + 10  /* How much he jumps */ );
+            body.velocity = new Vector2(body.velocity.x, jumpamount + 15  /* How much he jumps */ );
          }
          else
          {
