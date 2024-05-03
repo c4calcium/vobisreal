@@ -12,7 +12,6 @@ public class buttondoor : MonoBehaviour
     private GameObject[] buttons;
     //private GameObject[] buttons2;
     private List<GameObject> buttons2 = new List<GameObject>();
-    // Start is called before the first frame update
     void Start()
     {
         close = true;
@@ -31,10 +30,7 @@ public class buttondoor : MonoBehaviour
                 count++;
             }
         }
-
-
     }
-    // Update is called once per frame
     void Update()
     {
 
