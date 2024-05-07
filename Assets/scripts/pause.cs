@@ -18,13 +18,14 @@ public class pause : MonoBehaviour
         if (waiting > 0)
             waiting -= Time.deltaTime;
 
-        if (Input.GetKey("escape") || Input.GetKey(KeyCode.E))
+        if ((Input.GetKey("escape") || Input.GetKey(KeyCode.E)) && !Input.GetKey("space"))
         {
             if (paused == false && waiting <= 0)
                 {
                     paused = true;
                     pausemenu.SetActive(true);
                     waiting = 0.5f;
+                    Time.timeScale = 0;
                 }
             if (paused == true && waiting <= 0)
                 {
@@ -40,5 +41,13 @@ public class pause : MonoBehaviour
     public void quitgame()
     {
         Application.Quit();
+    }
+
+    public void resumegame()
+    {
+        paused = false;
+        pausemenu.SetActive(false);
+        waiting = 0.5f;
+        Time.timeScale = 1;
     }
 }

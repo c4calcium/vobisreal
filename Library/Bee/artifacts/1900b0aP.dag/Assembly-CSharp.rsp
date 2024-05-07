@@ -325,6 +325,7 @@
 "Assets/scripts/cameracontroller.cs"
 "Assets/scripts/door.cs"
 "Assets/scripts/jumppotion.cs"
+"Assets/scripts/pause.cs"
 "Assets/scripts/playerattack.cs"
 "Assets/scripts/playermovement.cs"
 "Assets/scripts/power.cs"
