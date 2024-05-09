@@ -7,20 +7,28 @@ public class CameraScript : MonoBehaviour
 
     private Transform securityCamera;
     //private EdgeCollider2D edge;
-    private float turn;//, increment;
-    private bool forward;
+    public float turn;//, increment;
+    public bool forward;
     //public float size;
     private int time1;
+    private int rev;
     // Start is called before the first frame update
     void Start()
     {
         securityCamera = GetComponent<Transform>();
        // edge = GetComponent<EdgeCollider2D>();
         
-        forward = true;
-        time1 = 0;
+       // time1 = 0;
+        turn = 0.07f;
+
+        if (forward)
+            rev = 1;
+        else
+            rev = -1;
+
+
         //increment = /*securityCamera.transform.localScale.y*/ size / 30000.0f;
-        turn = 0.3f;
+
     }
 
     // Update is called once per frame
@@ -31,22 +39,68 @@ public class CameraScript : MonoBehaviour
         //Vector3 axis = new Vector3(0, 1, 0);
         //securityCamera.transform.RotateAround(point, axis, 20 * Time.deltaTime);
 
-
-        if (forward)
-            turn += 0.0005f;//increment/*0.0005f*/;
-        else
-            turn -= 0.0005f;// increment/*0.0005f*/;
-        if (time1 == 10)
-            securityCamera.transform.Rotate(0, 0, turn);
-
-        if (turn < -0.7f)
-            forward = true;
-        if (turn > 0.7f)
+        if ((securityCamera.localRotation.z * 100) < -70 && rev == 1)
+        { //(forward)
             forward = false;
+           // print("BAKCWARD 1");
+        }
+        //increment/*0.0005f*/;
+        else if ((securityCamera.localRotation.z * 100) > -10 && rev == 1)
+        {
+            forward = true;// increment/*0.0005f*/;
+         //   print("FORWARD 1");
+        }
+        if ((securityCamera.localRotation.z * 100) > 70 && rev == -1)
+        { //(forward)
+            forward = true;
+         //   print("BAKCWARD 2");
+        }
+        //increment/*0.0005f*/;
+        else if ((securityCamera.localRotation.z * 100) < 10 && rev == -1)
+        {
+            forward = false;// increment/*0.0005f*/;
+          //  print("FORWARD2 ");
+        }
 
-        time1 ++;
-        if (time1 == 11)
-            time1 = 0;
+        /*if ((securityCamera.localRotation.z * 100) > 80 && rev == -1)
+        { //(forward)
+            forward = false;
+            print("BAKCWARD 2");
+        }
+        ;
+        else if ((securityCamera.localRotation.z * 100) < 0 && rev == -1)
+        {
+            forward = true;8;
+            print("FORWARD 2");
+        }*/
+
+        //if (rev == 1)
+        {
+            if (forward)
+                securityCamera.transform.Rotate(0, 0, -turn);//increment/*0.0005f*/;
+            else
+                securityCamera.transform.Rotate(0, 0, turn);// increment/*0.0005f*/;
+                                                            //   if (time1 == 10)
+        }
+        
+      //  if (rev == -1)
+      //  {
+        //    if (forward)
+             //   securityCamera.transform.Rotate(0, 0, turn);//increment/*0.0005f*/;
+          //  else
+            //    securityCamera.transform.Rotate(0, 0, -turn);// increment/*0.0005f*/;
+                                                            //   if (time1 == 10)
+       // }
+        // securityCamera.transform.Rotate(0, 0, turn);
+
+        //  if (turn < -0.7f)
+        //       forward = true;
+        //     if (turn > 0.7f)
+        //  forward = false;
+
+        //  time1 ++;
+        //  if (time1 == 11)
+        //      time1 = 0;
         //(600 * increment)
         /*Time.deltaTime * 10
         print(securityCamera.position.z);
