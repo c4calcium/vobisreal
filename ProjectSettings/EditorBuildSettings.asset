@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scene/jump1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/scene/jump2.unity
+    guid: 775804a2df06641488a5130922e104b4
   m_configObjects: {}

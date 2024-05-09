@@ -1,6 +1,7 @@
 //using System.Collections;
 //using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraScript : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class CameraScript : MonoBehaviour
     //public float size;
     private int time1;
     private int rev;
+    public LevelManager level;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +22,7 @@ public class CameraScript : MonoBehaviour
        // edge = GetComponent<EdgeCollider2D>();
         
        // time1 = 0;
-        turn = 0.07f;
+        turn = 0.03f;
 
         if (forward)
             rev = 1;
@@ -120,7 +123,8 @@ public class CameraScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "vob")
-            print("FOUND VOB");
+            level.LoadLevel(SceneManager.GetActiveScene().name);
+            //print("FOUND VOB");
     }
 
 

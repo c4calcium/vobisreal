@@ -2,7 +2,9 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraScript
+    - LevelManager
     - ball
+    - buttondoor
     - calbutton
     - cameracontroller
     - door
@@ -10,6 +12,7 @@ ScriptsOnlyBuild:
     - pause
     - playerattack
     - playermovement
+    - wall
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
@@ -103,8 +106,14 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: pause
     methodName: resumegame
+  - assembly: Assembly-CSharp
+    fullTypeName: pause
+    methodName: quitgame
+  - assembly: Assembly-CSharp
+    fullTypeName: pause
+    methodName: resumegame
   sceneClasses:
-    Assets/scene/scene.unity:
+    Assets/scene/jump1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -144,45 +153,142 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1632}
     - Class: 114
-      Script: {instanceID: 1886}
+      Script: {instanceID: 2362}
     - Class: 114
-      Script: {instanceID: 2364}
+      Script: {instanceID: 2912}
     - Class: 114
-      Script: {instanceID: 2914}
+      Script: {instanceID: 3176}
     - Class: 114
-      Script: {instanceID: 3178}
+      Script: {instanceID: 3528}
     - Class: 114
-      Script: {instanceID: 3530}
+      Script: {instanceID: 3722}
     - Class: 114
-      Script: {instanceID: 3724}
+      Script: {instanceID: 4354}
     - Class: 114
-      Script: {instanceID: 4358}
+      Script: {instanceID: 4678}
     - Class: 114
-      Script: {instanceID: 4682}
+      Script: {instanceID: 4774}
     - Class: 114
-      Script: {instanceID: 4780}
+      Script: {instanceID: 4816}
     - Class: 114
-      Script: {instanceID: 4822}
+      Script: {instanceID: 5140}
     - Class: 114
-      Script: {instanceID: 5146}
+      Script: {instanceID: 5354}
     - Class: 114
-      Script: {instanceID: 5360}
+      Script: {instanceID: 6076}
     - Class: 114
-      Script: {instanceID: 6082}
+      Script: {instanceID: 6416}
     - Class: 114
-      Script: {instanceID: 6422}
+      Script: {instanceID: 6782}
     - Class: 114
-      Script: {instanceID: 6788}
+      Script: {instanceID: 6998}
     - Class: 114
-      Script: {instanceID: 7004}
+      Script: {instanceID: 7076}
     - Class: 114
-      Script: {instanceID: 7082}
+      Script: {instanceID: 7408}
     - Class: 114
-      Script: {instanceID: 7414}
+      Script: {instanceID: 8024}
     - Class: 114
-      Script: {instanceID: 8030}
+      Script: {instanceID: 8962}
     - Class: 114
-      Script: {instanceID: 8968}
+      Script: {instanceID: 9788}
+    - Class: 114
+      Script: {instanceID: 29350}
+    - Class: 114
+      Script: {instanceID: 33282}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/scene/jump2.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 62
+      Script: {instanceID: 0}
+    - Class: 68
+      Script: {instanceID: 0}
+    - Class: 70
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1632}
+    - Class: 114
+      Script: {instanceID: 2912}
+    - Class: 114
+      Script: {instanceID: 3176}
+    - Class: 114
+      Script: {instanceID: 3528}
+    - Class: 114
+      Script: {instanceID: 3722}
+    - Class: 114
+      Script: {instanceID: 4354}
+    - Class: 114
+      Script: {instanceID: 4774}
+    - Class: 114
+      Script: {instanceID: 5354}
+    - Class: 114
+      Script: {instanceID: 6076}
+    - Class: 114
+      Script: {instanceID: 6416}
+    - Class: 114
+      Script: {instanceID: 6782}
+    - Class: 114
+      Script: {instanceID: 6998}
+    - Class: 114
+      Script: {instanceID: 7076}
+    - Class: 114
+      Script: {instanceID: 7408}
+    - Class: 114
+      Script: {instanceID: 8024}
+    - Class: 114
+      Script: {instanceID: 8962}
+    - Class: 114
+      Script: {instanceID: 9784}
+    - Class: 114
+      Script: {instanceID: 9788}
+    - Class: 114
+      Script: {instanceID: 29350}
+    - Class: 114
+      Script: {instanceID: 33282}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -268,12 +374,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnCollisionStayMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 871e3b6e5345d08ca2c5c115740c23e7
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CameraScript
   - hash:
       serializedVersion: 2
       Hash: f854af586011dd194574f89546642e29
@@ -612,12 +712,6 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionExit2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 667e4713cf93521909661a52526fbba2
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: buttonfordoor
-  - hash:
-      serializedVersion: 2
       Hash: 709e7a14fd69c48de1a0f460ef868042
     assemblyName: Unity.2D.Tilemap.Extras
     namespaceName: UnityEngine.Tilemaps
@@ -694,12 +788,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: 01115f907463d15fa3733c0c521d888a
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: buttondoor
   - hash:
       serializedVersion: 2
       Hash: c78ed13f6b5a632d70d4f73f56ad81f2
@@ -1462,7 +1550,38 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 01115f907463d15fa3733c0c521d888a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: buttondoor
+  - hash:
+      serializedVersion: 2
+      Hash: 5a4e0185287db57be5dc39c5f7b10460
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CameraScript
+  - hash:
+      serializedVersion: 2
+      Hash: 667e4713cf93521909661a52526fbba2
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: buttonfordoor
+  - hash:
+      serializedVersion: 2
+      Hash: af2c3e574db6c3d3b577877c246d7f0b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LevelManager
+  - hash:
+      serializedVersion: 2
+      Hash: c83a61a9f1ab5ac73486f95e3d4e7f24
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: wall
   platform: 19
   scenePathNames:
-  - Assets/scene/scene.unity
-  playerPath: C:/Users/kavest/Desktop/ga,er/vob.exe
+  - Assets/scene/jump1.unity
+  - Assets/scene/jump2.unity
+  playerPath: C:/Users/bestilson/Desktop/VobGame/vob.exe
