@@ -8,7 +8,7 @@ public class CameraScript : MonoBehaviour
 
     private Transform securityCamera;
     //private EdgeCollider2D edge;
-    public float turn;//, increment;
+    private float turn;//, increment;
     public bool forward;
     //public float size;
     private int time1;
@@ -22,7 +22,7 @@ public class CameraScript : MonoBehaviour
        // edge = GetComponent<EdgeCollider2D>();
         
        // time1 = 0;
-        turn = 0.03f;
+        turn = 0.04f;
 
         if (forward)
             rev = 1;
