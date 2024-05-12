@@ -106,8 +106,14 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: pause
     methodName: resumegame
+  - assembly: Assembly-CSharp
+    fullTypeName: pause
+    methodName: quitgame
+  - assembly: Assembly-CSharp
+    fullTypeName: pause
+    methodName: resumegame
   sceneClasses:
-    Assets/scene/jump2.unity:
+    Assets/scene/jump1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -165,13 +171,104 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4684}
     - Class: 114
-      Script: {instanceID: 4702}
-    - Class: 114
       Script: {instanceID: 4782}
     - Class: 114
       Script: {instanceID: 4824}
     - Class: 114
       Script: {instanceID: 5148}
+    - Class: 114
+      Script: {instanceID: 5362}
+    - Class: 114
+      Script: {instanceID: 6084}
+    - Class: 114
+      Script: {instanceID: 6424}
+    - Class: 114
+      Script: {instanceID: 6480}
+    - Class: 114
+      Script: {instanceID: 6792}
+    - Class: 114
+      Script: {instanceID: 7008}
+    - Class: 114
+      Script: {instanceID: 7086}
+    - Class: 114
+      Script: {instanceID: 7418}
+    - Class: 114
+      Script: {instanceID: 8034}
+    - Class: 114
+      Script: {instanceID: 8972}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/scene/jump2.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 62
+      Script: {instanceID: 0}
+    - Class: 68
+      Script: {instanceID: 0}
+    - Class: 70
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1632}
+    - Class: 114
+      Script: {instanceID: 1822}
+    - Class: 114
+      Script: {instanceID: 1888}
+    - Class: 114
+      Script: {instanceID: 2916}
+    - Class: 114
+      Script: {instanceID: 3180}
+    - Class: 114
+      Script: {instanceID: 3532}
+    - Class: 114
+      Script: {instanceID: 3726}
+    - Class: 114
+      Script: {instanceID: 4360}
+    - Class: 114
+      Script: {instanceID: 4702}
+    - Class: 114
+      Script: {instanceID: 4782}
     - Class: 114
       Script: {instanceID: 5362}
     - Class: 114
@@ -1485,5 +1582,6 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   platform: 19
   scenePathNames:
+  - Assets/scene/jump1.unity
   - Assets/scene/jump2.unity
-  playerPath: C:/Users/bestilson/Desktop/VobGame/vob.exe
+  playerPath: C:/Users/randy/OneDrive/Desktop/bijoux game design/Vob Game/vob.exe

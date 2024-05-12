@@ -22,7 +22,9 @@ public class wall : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "vob")
+        {
             level.LoadLevel("jump2");
-            //print("FOUND VOB");
+            print("FOUND VOB");
+        }
     }
 }

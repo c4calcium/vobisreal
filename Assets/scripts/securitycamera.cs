@@ -19,10 +19,8 @@ public class CameraScript : MonoBehaviour
     void Start()
     {
         securityCamera = GetComponent<Transform>();
-       // edge = GetComponent<EdgeCollider2D>();
-        
-       // time1 = 0;
-        turn = 0.04f;
+
+        turn = 0.1f;
 
         if (forward)
             rev = 1;
@@ -30,95 +28,37 @@ public class CameraScript : MonoBehaviour
             rev = -1;
 
 
-        //increment = /*securityCamera.transform.localScale.y*/ size / 30000.0f;
-
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        // Vector3 point = new Vector3(-16.3f, 13.7f, -2);
-        //Vector3 axis = new Vector3(0, 1, 0);
-        //securityCamera.transform.RotateAround(point, axis, 20 * Time.deltaTime);
-
         if ((securityCamera.localRotation.z * 100) < -70 && rev == 1)
-        { //(forward)
+        { 
             forward = false;
-           // print("BAKCWARD 1");
+          
         }
-        //increment/*0.0005f*/;
         else if ((securityCamera.localRotation.z * 100) > -10 && rev == 1)
         {
-            forward = true;// increment/*0.0005f*/;
-         //   print("FORWARD 1");
+            forward = true;
         }
         if ((securityCamera.localRotation.z * 100) > 70 && rev == -1)
-        { //(forward)
+        { 
             forward = true;
-         //   print("BAKCWARD 2");
         }
-        //increment/*0.0005f*/;
         else if ((securityCamera.localRotation.z * 100) < 10 && rev == -1)
         {
-            forward = false;// increment/*0.0005f*/;
-          //  print("FORWARD2 ");
-        }
-
-        /*if ((securityCamera.localRotation.z * 100) > 80 && rev == -1)
-        { //(forward)
             forward = false;
-            print("BAKCWARD 2");
         }
-        ;
-        else if ((securityCamera.localRotation.z * 100) < 0 && rev == -1)
         {
-            forward = true;8;
-            print("FORWARD 2");
-        }*/
-
-        //if (rev == 1)
-        {
-            if (forward)
-                securityCamera.transform.Rotate(0, 0, -turn);//increment/*0.0005f*/;
+            if (forward)   //when playing in the build, add / subtract 0.5. idk why it only works when you do that
+                securityCamera.transform.Rotate(0, 0, -turn/*-0.5f*/);
             else
-                securityCamera.transform.Rotate(0, 0, turn);// increment/*0.0005f*/;
-                                                            //   if (time1 == 10)
+                securityCamera.transform.Rotate(0, 0, turn/*+0.5f*/);
+                                         
         }
         
-      //  if (rev == -1)
-      //  {
-        //    if (forward)
-             //   securityCamera.transform.Rotate(0, 0, turn);//increment/*0.0005f*/;
-          //  else
-            //    securityCamera.transform.Rotate(0, 0, -turn);// increment/*0.0005f*/;
-                                                            //   if (time1 == 10)
-       // }
-        // securityCamera.transform.Rotate(0, 0, turn);
-
-        //  if (turn < -0.7f)
-        //       forward = true;
-        //     if (turn > 0.7f)
-        //  forward = false;
-
-        //  time1 ++;
-        //  if (time1 == 11)
-        //      time1 = 0;
-        //(600 * increment)
-        /*Time.deltaTime * 10
-        print(securityCamera.position.z);
-        if (securityCamera.position.z <= -50/* && (securityCamera.transform.position.z>0 || securityCamera.transform.position.z < -1)){ 
-            print(securityCamera.position.z);
-            forward = true;
-         }
-        if (securityCamera.position.z >= 16/* && (securityCamera.transform.position.z>0 || securityCamera.transform.position.z< -1)/)
-        {
-            print(securityCamera.position.z);
-            forward = false;
-        }
-        print(forward);*/
-
-
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

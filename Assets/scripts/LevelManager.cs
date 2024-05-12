@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     public void LoadLevel(string level)
     {
-        Debug.Log("Attempting to load " + level);
+        //Debug.Log("Attempting to load " + level);
         SceneManager.LoadScene(level);
     }
 

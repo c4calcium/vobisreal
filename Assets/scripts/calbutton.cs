@@ -15,10 +15,17 @@ public class calbutton : MonoBehaviour
 
     void Awake()
     {
+        
         sprite = GetComponent<SpriteRenderer>();
         bcollider = GetComponent<BoxCollider2D>();
         timer3 = 3;
         timer4 = 17;
+        door.SetActive(true);
+        room1bp = 0;
+        room2bp = 0;
+        room3bp = 0;
+        room4bp = 0;
+
     }
 
     void Update()
