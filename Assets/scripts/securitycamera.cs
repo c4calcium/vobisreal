@@ -20,7 +20,7 @@ public class CameraScript : MonoBehaviour
     {
         securityCamera = GetComponent<Transform>();
 
-        turn = 0.1f;
+        turn = 0.03f;
 
         if (forward)
             rev = 1;
@@ -34,20 +34,20 @@ public class CameraScript : MonoBehaviour
     void Update()
     {
 
-        if ((securityCamera.localRotation.z * 100) < -70 && rev == 1)
+        if ((securityCamera.localRotation.z * 100) < -30 && rev == 1)
         { 
             forward = false;
           
         }
-        else if ((securityCamera.localRotation.z * 100) > -10 && rev == 1)
+        else if ((securityCamera.localRotation.z * 100) > 30 && rev == 1)
         {
             forward = true;
         }
-        if ((securityCamera.localRotation.z * 100) > 70 && rev == -1)
+        if ((securityCamera.localRotation.z * 100) > 30 && rev == -1)
         { 
             forward = true;
         }
-        else if ((securityCamera.localRotation.z * 100) < 10 && rev == -1)
+        else if ((securityCamera.localRotation.z * 100) < -30 && rev == -1)
         {
             forward = false;
         }
