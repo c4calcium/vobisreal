@@ -3,13 +3,13 @@ using UnityEngine;
 public class power : MonoBehaviour
 {
     //public static bool powerChange = false;
-    public static string level;
+    public static string level = "none";
 
 
     // Start is called before the first frame update
     void Start()
     {
-        level = "none";
+        //level = "none";
     }
 
     // Update is called once per frame

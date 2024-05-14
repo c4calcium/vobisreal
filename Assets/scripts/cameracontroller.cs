@@ -3,16 +3,17 @@ using UnityEngine;
 public class cameracontroller : MonoBehaviour
 {
     [SerializeField] private float speed;
-    private float currentposx;
-    private float currentposy;
-    private float size;
+    public float currentposx;
+    public float currentposy;
+    public float size = 0f;
     private Vector3 velocity = Vector3.zero;
     private new Camera camera;
 
     private void Awake()
     {
         camera = GetComponent<Camera>();
-        size = 6;
+        if (size == 0)
+          size = 6;
     }
 
     private void Update()

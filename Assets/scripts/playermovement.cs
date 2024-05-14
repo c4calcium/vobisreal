@@ -39,7 +39,20 @@ public class playermovement : MonoBehaviour
       else if (horizontalinput < -0.01f)
          transform.localScale = new Vector3(-1, 1, 1);
 
-      //animates the lad
+
+        if (power.getLevel() == "jump")
+        {
+           // print("JUMP");
+            anim.SetFloat("power", 1);
+        }
+        else if (power.getLevel() == "none")
+
+        {
+            //print("NO JUMP");
+            anim.SetFloat("power", 0);
+        }
+
+        //animates the lad
       anim.SetBool("walk", horizontalinput != 0);
       anim.SetBool("grounded", isgrounded());
       anim.SetBool("jump", jumpcooldown > 0);

@@ -12,7 +12,7 @@ public class door : MonoBehaviour
    {
     if (collision.tag == "Player")
     {
-        if(collision.transform.position.x < transform.position.x)
+        if(collision.transform.position.x != transform.position.x)
             cam.movetonewroom(nextroom, zoomahead);
         else
             cam.movetonewroom(previousroom, zoomprevious);

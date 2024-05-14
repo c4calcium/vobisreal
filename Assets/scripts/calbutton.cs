@@ -4,10 +4,7 @@ public class calbutton : MonoBehaviour
 {
     [SerializeField] private int room;
     [SerializeField] private GameObject door;
-    private static int room1bp; // bp means buttons pressed
-    private static int room2bp;
-    private static int room3bp;
-    private static int room4bp;
+    private static int room1bp, room2bp, room3bp, room4bp, room5bp; // bp means buttons pressed
     private SpriteRenderer sprite;
     private BoxCollider2D bcollider;
     private float timer3;
@@ -18,13 +15,15 @@ public class calbutton : MonoBehaviour
         
         sprite = GetComponent<SpriteRenderer>();
         bcollider = GetComponent<BoxCollider2D>();
-        timer3 = 3;
+        timer3 = 15;
         timer4 = 17;
         door.SetActive(true);
         room1bp = 0;
         room2bp = 0;
         room3bp = 0;
         room4bp = 0;
+
+        room5bp = 0;
 
     }
 
@@ -67,9 +66,29 @@ public class calbutton : MonoBehaviour
 
         if (timer3 <= 0)
             {
-                timer3 = 3;
+                timer3 = 15;
                 room3bp = 0;
             }
+
+        if (room5bp == 0 && room == 5)
+        {
+            bcollider.enabled = true;
+            sprite.color = new Color(1f, 1f, 1f, 1f);
+        }
+
+        if (room5bp == 1)
+        {
+            if (timer3 <= 15)
+                timer3 -= Time.deltaTime;
+            if (room5bp == 2)
+                timer3 = 100;
+        }
+
+        if (timer3 <= 0)
+        {
+            timer3 = 15;
+            room5bp = 0;
+        }
 
         if (room1bp == 1 && room == 1)
             opendoor();
@@ -78,6 +97,8 @@ public class calbutton : MonoBehaviour
         if (room3bp == 2 && room == 3)
             opendoor();
         if (room4bp == 7 && room == 4)
+            opendoor();
+        if (room5bp == 2 && room == 5)
             opendoor();
     }
 
@@ -93,6 +114,8 @@ public class calbutton : MonoBehaviour
                 room3bp++;
             else if (room == 4)
                 room4bp++;
+            else if (room == 5)
+                room5bp++;
             else
                 Debug.LogError("what room?");
 

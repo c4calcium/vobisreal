@@ -10,8 +10,7 @@ public class CameraScript : MonoBehaviour
     //private EdgeCollider2D edge;
     private float turn;//, increment;
     public bool forward;
-    //public float size;
-    private int time1;
+    public float size = 0f;
     private int rev;
     public LevelManager level;
 
@@ -34,28 +33,30 @@ public class CameraScript : MonoBehaviour
     void Update()
     {
 
-        if ((securityCamera.localRotation.z * 100) < -30 && rev == 1)
+        if ((securityCamera.localRotation.z * 100) < -30-size && rev == 1)
         { 
             forward = false;
           
         }
-        else if ((securityCamera.localRotation.z * 100) > 30 && rev == 1)
+        else if ((securityCamera.localRotation.z * 100) > 30+size && rev == 1)
         {
             forward = true;
         }
-        if ((securityCamera.localRotation.z * 100) > 30 && rev == -1)
+        if ((securityCamera.localRotation.z * 100) > 30+size && rev == -1)
         { 
             forward = true;
         }
-        else if ((securityCamera.localRotation.z * 100) < -30 && rev == -1)
+        else if ((securityCamera.localRotation.z * 100) < -30-size && rev == -1)
         {
             forward = false;
         }
         {
             if (forward)   //when playing in the build, add / subtract 0.5. idk why it only works when you do that
-                securityCamera.transform.Rotate(0, 0, -turn/*-0.5f*/);
+               securityCamera.transform.Rotate(0, 0, -turn-0.5f);
+               // securityCamera.transform.Rotate(0, 0, -turn);
             else
-                securityCamera.transform.Rotate(0, 0, turn/*+0.5f*/);
+                securityCamera.transform.Rotate(0, 0, turn + 0.5f);
+               // securityCamera.transform.Rotate(0, 0, turn);
                                          
         }
         

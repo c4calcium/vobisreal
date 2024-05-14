@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class wall : MonoBehaviour
 {
     public LevelManager level;
+    public string nextScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,7 @@ public class wall : MonoBehaviour
     {
         if (collision.gameObject.name == "vob")
         {
-            level.LoadLevel("jump2");
+            level.LoadLevel(nextScene);
             print("FOUND VOB");
         }
     }

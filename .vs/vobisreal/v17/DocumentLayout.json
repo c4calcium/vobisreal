@@ -3,19 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\randy\\OneDrive\\Desktop\\bijoux game design\\Vob Game\\vobisreal\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B495018A-768F-FE25-5B6B-0B4F39EBBB67}|Assembly-CSharp.csproj|c:\\users\\randy\\onedrive\\desktop\\bijoux game design\\vob game\\vobisreal\\assets\\scripts\\power.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B495018A-768F-FE25-5B6B-0B4F39EBBB67}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\power.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B495018A-768F-FE25-5B6B-0B4F39EBBB67}|Assembly-CSharp.csproj|c:\\users\\randy\\onedrive\\desktop\\bijoux game design\\vob game\\vobisreal\\assets\\scripts\\securitycamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B495018A-768F-FE25-5B6B-0B4F39EBBB67}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\securitycamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B495018A-768F-FE25-5B6B-0B4F39EBBB67}|Assembly-CSharp.csproj|c:\\users\\randy\\onedrive\\desktop\\bijoux game design\\vob game\\vobisreal\\assets\\scripts\\calbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B495018A-768F-FE25-5B6B-0B4F39EBBB67}|Assembly-CSharp.csproj|C:\\Users\\randy\\OneDrive\\Desktop\\bijoux game design\\Vob Game\\vobisreal\\assets\\scripts\\calbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B495018A-768F-FE25-5B6B-0B4F39EBBB67}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\calbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B495018A-768F-FE25-5B6B-0B4F39EBBB67}|Assembly-CSharp.csproj|c:\\users\\randy\\onedrive\\desktop\\bijoux game design\\vob game\\vobisreal\\assets\\scripts\\wall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B495018A-768F-FE25-5B6B-0B4F39EBBB67}|Assembly-CSharp.csproj|C:\\Users\\randy\\OneDrive\\Desktop\\bijoux game design\\Vob Game\\vobisreal\\assets\\scripts\\wall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B495018A-768F-FE25-5B6B-0B4F39EBBB67}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\wall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B495018A-768F-FE25-5B6B-0B4F39EBBB67}|Assembly-CSharp.csproj|c:\\users\\randy\\onedrive\\desktop\\bijoux game design\\vob game\\vobisreal\\assets\\scripts\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B495018A-768F-FE25-5B6B-0B4F39EBBB67}|Assembly-CSharp.csproj|C:\\Users\\randy\\OneDrive\\Desktop\\bijoux game design\\Vob Game\\vobisreal\\assets\\scripts\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B495018A-768F-FE25-5B6B-0B4F39EBBB67}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -42,11 +46,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "power.cs",
+              "DocumentMoniker": "C:\\Users\\randy\\OneDrive\\Desktop\\bijoux game design\\Vob Game\\vobisreal\\Assets\\scripts\\power.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\power.cs",
+              "ToolTip": "C:\\Users\\randy\\OneDrive\\Desktop\\bijoux game design\\Vob Game\\vobisreal\\Assets\\scripts\\power.cs",
+              "RelativeToolTip": "Assets\\scripts\\power.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T23:26:32.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "calbutton.cs",
               "DocumentMoniker": "C:\\Users\\randy\\OneDrive\\Desktop\\bijoux game design\\Vob Game\\vobisreal\\Assets\\scripts\\calbutton.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\calbutton.cs",
@@ -54,12 +71,11 @@
               "RelativeToolTip": "Assets\\scripts\\calbutton.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAQwBYAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T18:54:11.387Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-12T18:54:11.387Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "wall.cs",
               "DocumentMoniker": "C:\\Users\\randy\\OneDrive\\Desktop\\bijoux game design\\Vob Game\\vobisreal\\Assets\\scripts\\wall.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\wall.cs",
@@ -67,12 +83,11 @@
               "RelativeToolTip": "Assets\\scripts\\wall.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T18:46:58.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-12T18:46:58.322Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "LevelManager.cs",
               "DocumentMoniker": "C:\\Users\\randy\\OneDrive\\Desktop\\bijoux game design\\Vob Game\\vobisreal\\Assets\\scripts\\LevelManager.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\LevelManager.cs",
@@ -80,12 +95,11 @@
               "RelativeToolTip": "Assets\\scripts\\LevelManager.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T18:45:53.407Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-12T18:45:53.407Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "buttondoor.cs",
               "DocumentMoniker": "C:\\Users\\randy\\OneDrive\\Desktop\\bijoux game design\\Vob Game\\vobisreal\\Assets\\scripts\\buttondoor.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\buttondoor.cs",
@@ -97,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "door.cs",
               "DocumentMoniker": "C:\\Users\\randy\\OneDrive\\Desktop\\bijoux game design\\Vob Game\\vobisreal\\Assets\\scripts\\door.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\door.cs",
@@ -109,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "securitycamera.cs",
               "DocumentMoniker": "C:\\Users\\randy\\OneDrive\\Desktop\\bijoux game design\\Vob Game\\vobisreal\\Assets\\scripts\\securitycamera.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\securitycamera.cs",
@@ -122,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "buttonfordoor.cs",
               "DocumentMoniker": "C:\\Users\\randy\\OneDrive\\Desktop\\bijoux game design\\Vob Game\\vobisreal\\Assets\\scripts\\buttonfordoor.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\buttonfordoor.cs",
@@ -134,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "playermovement.cs",
               "DocumentMoniker": "C:\\Users\\randy\\OneDrive\\Desktop\\bijoux game design\\Vob Game\\vobisreal\\Assets\\scripts\\playermovement.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\playermovement.cs",
