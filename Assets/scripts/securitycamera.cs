@@ -8,10 +8,10 @@ public class CameraScript : MonoBehaviour
 
     private Transform securityCamera;
     //private EdgeCollider2D edge;
-    private float turn;//, increment;
-    public bool forward;
-    public float size = 0f;
-    private int rev;
+    private float turn;
+    public bool forward; //whether it starts off turning left or right, true = starts off rotating forward, or left, false is backward / right
+    public float size = 0f; //you can change how much it moves
+    private int rev; // rev = reverse
     public LevelManager level;
 
     // Start is called before the first frame update
@@ -52,11 +52,11 @@ public class CameraScript : MonoBehaviour
         }
         {
             if (forward)   //when playing in the build, add / subtract 0.5. idk why it only works when you do that
-               securityCamera.transform.Rotate(0, 0, -turn-0.5f);
-               // securityCamera.transform.Rotate(0, 0, -turn);
+                securityCamera.transform.Rotate(0, 0, -turn-0.5f);
+                //securityCamera.transform.Rotate(0, 0, -turn);
             else
                 securityCamera.transform.Rotate(0, 0, turn + 0.5f);
-               // securityCamera.transform.Rotate(0, 0, turn);
+              // securityCamera.transform.Rotate(0, 0, turn);
                                          
         }
         
@@ -65,7 +65,6 @@ public class CameraScript : MonoBehaviour
     {
         if (collision.gameObject.name == "vob")
             level.LoadLevel(SceneManager.GetActiveScene().name);
-            //print("FOUND VOB");
     }
 
 

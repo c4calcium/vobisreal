@@ -6,7 +6,6 @@ public class power : MonoBehaviour
     public static string level = "none";
 
 
-    // Start is called before the first frame update
     void Start()
     {
         //level = "none";
@@ -15,20 +14,12 @@ public class power : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (powerChange == true)
-          //  print("POWERCHANGE");
     }
 
     public static string getLevel()
     {
         return level;
     }
-    /*
-    public bool getPowerChange()
-    {
-        return powerChange;
-    }
-    */
     public static void setLevel(string lev)
     {
         level = lev;

@@ -17,7 +17,7 @@ public class playermovement : MonoBehaviour
 
    private void Awake()
    {
-       caniwall = false;
+      caniwall = false; //wall jumping, didn't reach this goal
       body = GetComponent<Rigidbody2D>(); 
       anim = GetComponent<Animator>(); 
       capsulecollider = GetComponent<CapsuleCollider2D>();
@@ -114,7 +114,7 @@ public class playermovement : MonoBehaviour
       return raycastHit.collider != null;
    }
 
-   private bool onwall()
+   private bool onwall() //wall jumping, didn't reach this goal
    {
       RaycastHit2D raycastHit = Physics2D.BoxCast(capsulecollider.bounds.center, capsulecollider.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, walllayer);
       return raycastHit.collider != null;

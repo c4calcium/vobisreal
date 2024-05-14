@@ -3,12 +3,14 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CameraScript
     - LevelManager
+    - MusicPlayer
     - ball
     - buttondoor
     - buttonfordoor
     - calbutton
     - cameracontroller
     - door
+    - endWall
     - jumppotion
     - pause
     - playerattack
@@ -143,8 +145,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 62
       Script: {instanceID: 0}
-    - Class: 68
-      Script: {instanceID: 0}
     - Class: 70
       Script: {instanceID: 0}
     - Class: 74
@@ -161,8 +161,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 1632}
     - Class: 114
       Script: {instanceID: 1822}
-    - Class: 114
-      Script: {instanceID: 1888}
     - Class: 114
       Script: {instanceID: 2366}
     - Class: 114
@@ -200,9 +198,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7418}
     - Class: 114
-      Script: {instanceID: 8034}
+      Script: {instanceID: 8036}
     - Class: 114
-      Script: {instanceID: 8972}
+      Script: {instanceID: 8974}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -236,8 +234,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
-    - Class: 58
-      Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
     - Class: 62
@@ -249,6 +245,8 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -293,9 +291,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7418}
     - Class: 114
-      Script: {instanceID: 8034}
+      Script: {instanceID: 7804}
     - Class: 114
-      Script: {instanceID: 8972}
+      Script: {instanceID: 8036}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -328,8 +326,6 @@ ScriptsOnlyBuild:
     - Class: 48
       Script: {instanceID: 0}
     - Class: 50
-      Script: {instanceID: 0}
-    - Class: 58
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
@@ -388,9 +384,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7418}
     - Class: 114
-      Script: {instanceID: 8034}
+      Script: {instanceID: 8036}
     - Class: 114
-      Script: {instanceID: 8972}
+      Script: {instanceID: 58860}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1354,6 +1350,12 @@ ScriptsOnlyBuild:
     className: TMP_FrameRateCounter
   - hash:
       serializedVersion: 2
+      Hash: d59d586c3180fcf0978314ed5d001051
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MusicPlayer
+  - hash:
+      serializedVersion: 2
       Hash: a119221a1c3d590645a52df2cbebb41c
     assemblyName: Unity.2D.Tilemap.Extras
     namespaceName: UnityEngine
@@ -1682,9 +1684,15 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 0d3a3b6d5075e92a8582ae22cc57f180
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: endWall
   platform: 19
   scenePathNames:
   - Assets/scene/jump1.unity
   - Assets/scene/jump2.unity
   - Assets/scene/jump3.unity
-  playerPath: C:/Users/randy/OneDrive/Desktop/bijoux game design/Vob Game/vob.exe
+  playerPath: C:/Users/bestilson/Desktop/VobGame/vob.exe

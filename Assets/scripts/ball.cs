@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class ball : MonoBehaviour
-{
+{ //IGNORE THIS we didn't end up using it
     [SerializeField] private float speed;
     private float direction;
     private bool hit;

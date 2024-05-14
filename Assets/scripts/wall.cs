@@ -14,7 +14,6 @@ public class wall : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -25,7 +24,7 @@ public class wall : MonoBehaviour
         if (collision.gameObject.name == "vob")
         {
             level.LoadLevel(nextScene);
-            print("FOUND VOB");
+           // print("FOUND VOB");
         }
     }
 }

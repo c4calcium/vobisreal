@@ -20,11 +20,11 @@ public class buttondoor : MonoBehaviour
         buttons = GameObject.FindGameObjectsWithTag("doorbutton");
         foreach (GameObject s in buttons)
         {
-            print(s.transform.parent.gameObject + "   " + room);
-            print(s.transform.parent.gameObject == room);
+            //print(s.transform.parent.gameObject + "   " + room);
+           // print(s.transform.parent.gameObject == room);
             if (s.transform.parent.gameObject == room)
             {
-                print(s);
+                //print(s);
                 if (s != null)
                     buttons2.Add(s);
                 count++;
@@ -34,21 +34,10 @@ public class buttondoor : MonoBehaviour
     void Update()
     {
 
-        /**
-         * HI CAL
-         * 
-         * 
-         * ok so the issue is that it keeps setting the close to true even though it's supposed to register
-         * as false because it should be checking the getOpen. so yeah
-         * 
-         * i commented out the test print statement but feel free to comment them back in to check stuff 
-         * 
-         * so yeah the first room works fine but after that it refuses to register as open
-         * */
+       
         close = true;
         foreach (GameObject h in buttons2)
         {
-            //print("HELP");
 
             temp = h.GetComponent<buttonfordoor>();
            // print("Temp.getopen: " + temp.getOpen());
@@ -62,12 +51,5 @@ public class buttondoor : MonoBehaviour
         else
             box.isTrigger = true;
 
-      //  print("isTrigger: " + box.isTrigger);
-
     }
-    //private void OnTriggerEnter2D(Collider2D collision)
-    // {
-    //    if (collision.gameObject.name == "VOB" || )
-
-    //  }
 }

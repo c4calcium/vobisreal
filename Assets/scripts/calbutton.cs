@@ -17,7 +17,9 @@ public class calbutton : MonoBehaviour
         bcollider = GetComponent<BoxCollider2D>();
         timer3 = 15;
         timer4 = 17;
+
         door.SetActive(true);
+
         room1bp = 0;
         room2bp = 0;
         room3bp = 0;
@@ -116,9 +118,9 @@ public class calbutton : MonoBehaviour
                 room4bp++;
             else if (room == 5)
                 room5bp++;
-            else
+            /*else
                 Debug.LogError("what room?");
-
+            */
             bcollider.enabled = false;
             sprite.color = new Color(1f, 1f, 1f, 0f);
 
@@ -130,10 +132,10 @@ public class calbutton : MonoBehaviour
         if (door != null) // is door real?
         {
             door.SetActive(false);
-        }
+        }/*
         else
         {
             Debug.LogError("door is not real!");
-        }
+        }*/
     }
 }
