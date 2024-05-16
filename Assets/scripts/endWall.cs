@@ -22,7 +22,7 @@ public class endWall : MonoBehaviour
     {
         if (collision.gameObject.name == "vob")
         {
-            level.QuitGame();
+            level.LoadLevel("win");
            // print("FOUND VOB");
         }
     }
