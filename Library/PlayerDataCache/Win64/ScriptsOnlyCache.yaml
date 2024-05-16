@@ -151,6 +151,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -197,6 +201,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 7086}
     - Class: 114
       Script: {instanceID: 7418}
+    - Class: 114
+      Script: {instanceID: 7804}
     - Class: 114
       Script: {instanceID: 8036}
     - Class: 114
@@ -248,6 +254,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 82
       Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -268,6 +276,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3532}
     - Class: 114
       Script: {instanceID: 3726}
+    - Class: 114
+      Script: {instanceID: 4264}
     - Class: 114
       Script: {instanceID: 4360}
     - Class: 114
@@ -339,6 +349,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -384,9 +398,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7418}
     - Class: 114
+      Script: {instanceID: 7804}
+    - Class: 114
       Script: {instanceID: 8036}
     - Class: 114
-      Script: {instanceID: 58860}
+      Script: {instanceID: 9008}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1548,6 +1564,12 @@ ScriptsOnlyBuild:
     className: ball
   - hash:
       serializedVersion: 2
+      Hash: 0d3a3b6d5075e92a8582ae22cc57f180
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: endWall
+  - hash:
+      serializedVersion: 2
       Hash: 9a174471d4db2c0c6d3ac47d2f818db1
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1684,12 +1706,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 0d3a3b6d5075e92a8582ae22cc57f180
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: endWall
   platform: 19
   scenePathNames:
   - Assets/scene/jump1.unity
