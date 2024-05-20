@@ -3851,6 +3851,7 @@ MonoBehaviour:
   forward: 1
   size: -10
   level: {fileID: 347671420}
+  whatlevel: lose2
 --- !u!212 &1254623918
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6244,6 +6245,7 @@ MonoBehaviour:
   forward: 1
   size: 10
   level: {fileID: 347671420}
+  whatlevel: lose2
 --- !u!212 &1802681257
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7297,6 +7299,7 @@ MonoBehaviour:
   forward: 1
   size: -5
   level: {fileID: 347671420}
+  whatlevel: lose2
 --- !u!212 &2132330440
 SpriteRenderer:
   m_ObjectHideFlags: 0

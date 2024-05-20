@@ -13,6 +13,7 @@ public class CameraScript : MonoBehaviour
     public float size = 0f; //you can change how much it moves
     private int rev; // rev = reverse
     public LevelManager level;
+    [SerializeField] string whatlevel;
 
     // Start is called before the first frame update
     void Start()
@@ -64,7 +65,10 @@ public class CameraScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "vob")
-            level.LoadLevel(SceneManager.GetActiveScene().name);
+            if(whatlevel == "lose1")
+                level.LoadLevel("lose1");
+            if(whatlevel == "lose2")
+                level.LoadLevel("lose2");
     }
 
 

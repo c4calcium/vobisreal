@@ -333,6 +333,7 @@
 "Assets/scripts/playermovement.cs"
 "Assets/scripts/power.cs"
 "Assets/scripts/securitycamera.cs"
+"Assets/scripts/upndown.cs"
 "Assets/scripts/wall.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
